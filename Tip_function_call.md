@@ -24,6 +24,7 @@ function construct(head, tail) {
 function project(table, keys) {
 	return _.map(table, function(obj) {
 	    // construct(obj, keys): build paramter array
+	    // equal to: _.pick(obj, keys);
     	return _.pick.apply(null, construct(obj, keys));
     })
 }
